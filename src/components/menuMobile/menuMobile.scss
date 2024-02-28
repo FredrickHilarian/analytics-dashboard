@@ -1,0 +1,55 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.menuMobile {
+  .hamburgerMobile{
+    position: absolute;
+    z-index: 1;
+    background-color: #384256;
+    top: 12px;
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-left: 4px;
+
+    .title {
+      font-size: 12px;
+      font-weight: 200;
+      color: $soft-color;
+      text-transform: uppercase;
+
+      @include lg{
+        display: none;
+      }
+    }
+
+    .listItem {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: #4e4e4e;
+      }
+
+      .listItemTitle{
+        @include lg{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.menuMobile {
+      display: block; // Show menu items by default
+
+    @media (min-width: 992px) {
+        display: None; // Hide menu items when screen size is 992px or larger
+    }
+}
